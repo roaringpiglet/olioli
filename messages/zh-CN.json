@@ -1,0 +1,479 @@
+{
+  "meta": {
+    "title": "升学操作系统",
+    "description": "顾问、学生与家长协作的 AI 驱动升学规划系统。"
+  },
+  "common": {
+    "save": "保存",
+    "saveNow": "立即保存",
+    "cancel": "取消",
+    "close": "关闭",
+    "delete": "删除",
+    "edit": "编辑",
+    "rename": "重命名",
+    "add": "添加",
+    "create": "创建",
+    "back": "返回",
+    "next": "下一步",
+    "previous": "上一步",
+    "confirm": "确认",
+    "loading": "加载中……",
+    "saving": "保存中……",
+    "saved": "已保存",
+    "savedAgo": "已于 {when} 保存",
+    "lastUpdated": "最近更新于 {when}",
+    "unsavedChanges": "有未保存的修改",
+    "justNow": "刚刚",
+    "minAgo": "{n} 分钟前",
+    "hourAgo": "{n} 小时前",
+    "dayAgo": "{n} 天前",
+    "today": "今天",
+    "tomorrow": "明天",
+    "yesterday": "昨天",
+    "inDays": "{n} 天后",
+    "daysAgo": "{n} 天前",
+    "timeNotSet": "时间未定",
+    "empty": "暂无内容",
+    "noneYet": "还没有内容",
+    "optional": "可选",
+    "required": "必填",
+    "open": "打开",
+    "openArrow": "打开 →",
+    "refresh": "刷新",
+    "thinking": "思考中……",
+    "by": "由 {name} 添加",
+    "byWithRole": "由 {name}（{role}）添加",
+    "loadingGeneric": "加载中……",
+    "retry": "重试",
+    "you": "你",
+    "searchPlaceholder": "搜索",
+    "generatedAt": "上次生成：{when}"
+  },
+  "nav": {
+    "dashboard": "主页",
+    "timeline": "时间线",
+    "meetings": "会谈",
+    "growth": "成长"
+  },
+  "app": {
+    "signOut": "退出登录",
+    "brand": "升学 OS"
+  },
+  "roles": {
+    "counselor": "顾问",
+    "student": "学生",
+    "parent": "家长",
+    "manager": "管理者"
+  },
+  "roleBlurb": {
+    "counselor": "你可以规划阶段目标、调整时间线、接受或拒绝 AI 建议。",
+    "student": "记录学习进展、勾选任务、写下反思，让你的故事逐渐成形。",
+    "parent": "你可以查看进展、了解近况；编辑权限在顾问与学生手中。",
+    "manager": "系统管理员：审批用户、串联各方。"
+  },
+  "tracks": {
+    "academic": { "label": "学术", "blurb": "校内课程、学期测试、成绩单关键节点。" },
+    "testing": { "label": "标化考试", "blurb": "TOEFL、SAT、AP 等考试的报名与备考节奏。" },
+    "extracurriculars": { "label": "课外活动", "blurb": "社团、竞赛、课外项目的推进。" },
+    "portfolio": { "label": "作品集", "blurb": "作品集构建、迭代与提交准备。" },
+    "college_application": { "label": "申请准备", "blurb": "选校、文书、推荐信、网申各环节。" },
+    "personal_development": { "label": "个人成长", "blurb": "阅读、反思、兴趣探索等长期积累。" }
+  },
+  "statuses": {
+    "todo": {
+      "todo": "待办",
+      "in_progress": "进行中",
+      "done": "已完成"
+    },
+    "timeline": {
+      "planned": "计划中",
+      "active": "进行中",
+      "done": "已完成"
+    },
+    "meeting": {
+      "requested": "待确认",
+      "scheduled": "已安排",
+      "completed": "已结束",
+      "cancelled": "已取消",
+      "rejected": "已拒绝"
+    },
+    "topic": {
+      "open": "待讨论",
+      "scheduled": "已安排进会议",
+      "completed": "已讨论"
+    }
+  },
+  "auth": {
+    "signIn": {
+      "title": "登录",
+      "subtitle": "使用已通过审批的账号继续。",
+      "email": "邮箱",
+      "password": "密码",
+      "submit": "登录",
+      "submitting": "登录中……",
+      "noAccount": "还没有账号？",
+      "goSignUp": "去注册",
+      "wrongCreds": "邮箱或密码不正确。"
+    },
+    "signUp": {
+      "title": "申请使用",
+      "subtitle": "注册后需由管理者通过邮件链接审批。",
+      "fullName": "姓名",
+      "fullNamePlaceholder": "例如：李明 / Ming Li",
+      "email": "邮箱",
+      "password": "密码",
+      "passwordHint": "至少 8 位。",
+      "role": "你的角色",
+      "studentEmail": "关联的学生邮箱",
+      "studentEmailHint": "家长或顾问请填写你支持的学生邮箱。",
+      "submit": "提交申请",
+      "submitting": "提交中……",
+      "success": "已提交！我们会邮件通知管理者审批你的账号。",
+      "haveAccount": "已有账号？",
+      "goSignIn": "去登录"
+    },
+    "pending": {
+      "title": "等待审批",
+      "body": "你的账号还在审批中。管理者通过后你就可以登录了。",
+      "signOut": "退出"
+    }
+  },
+  "dashboard": {
+    "welcome": "你好，{name}",
+    "welcomePlain": "欢迎回来",
+    "weekRangePrefix": "本周",
+    "monthPrefix": "本月",
+    "noStudentLinked": "你的账号还没有关联任何学生。",
+    "stage": {
+      "heading": "当前阶段",
+      "regenerate": "重新生成",
+      "regenerating": "生成中……",
+      "empty": "还没有生成阶段概览。点击右上角的「重新生成」让 AI 帮你起草一份。",
+      "focusAreas": "重点方向",
+      "why": "为什么现在关注",
+      "lastGenerated": "上次生成：{when}"
+    },
+    "monthly": {
+      "heading": "本月目标",
+      "subheading": "3–5 条以结果为导向的优先事项。顾问可编辑。",
+      "add": "+ 新增目标",
+      "placeholder": "例如：完成两所暑校申请文书初稿",
+      "empty": "还没有本月目标。",
+      "track": "分类",
+      "trackPlaceholder": "选择一个方向"
+    },
+    "weekly": {
+      "heading": "本周待办",
+      "subheading": "由本月目标拆解出来的具体行动。",
+      "add": "+ 新增待办",
+      "placeholder": "例如：周三前读完 Parsons 课程大纲",
+      "empty": "还没有本周待办。",
+      "statusLabel": "状态",
+      "notesLabel": "备注",
+      "notesPlaceholder": "写下你的想法或卡住的点……",
+      "track": "分类"
+    },
+    "period": {
+      "prev": "上一期",
+      "next": "下一期",
+      "today": "回到今天"
+    }
+  },
+  "timeline": {
+    "heading": "时间线",
+    "subheading": "跨 6 个方向的高层路线图：学术、考试、课外、作品集、申请、个人成长。",
+    "addItem": "+ 新增条目",
+    "addDeadline": "+ 新增截止日期",
+    "empty": "还没有条目。",
+    "goalsOnTimeline": "本月目标",
+    "threadsHeading": "在进行的主线",
+    "newItem": {
+      "title": "标题",
+      "titlePlaceholder": "例如：Parsons 暑校申请窗口",
+      "track": "方向",
+      "status": "状态",
+      "thread": "所属主线（可选）",
+      "threadPlaceholder": "例如：Parsons 暑校",
+      "kind": "类型",
+      "kindRange": "时间段",
+      "kindDeadline": "截止日期",
+      "start": "开始",
+      "end": "结束",
+      "date": "日期",
+      "notes": "备注",
+      "notesPlaceholder": "额外上下文（可选）",
+      "save": "保存",
+      "saving": "保存中……",
+      "delete": "删除"
+    },
+    "hover": {
+      "summary": "AI 摘要",
+      "summarizing": "AI 正在归纳此区间……",
+      "noContent": "这一段还没有内容可以归纳。"
+    }
+  },
+  "meetings": {
+    "heading": "会谈",
+    "subheading": "即将召开与已结束的会谈，以及待讨论话题。",
+    "newMeeting": "+ 新增会谈",
+    "logPast": "记录过往会谈",
+    "requestMeeting": "+ 申请会谈",
+    "upcoming": "即将召开",
+    "past": "已结束",
+    "topicsHeading": "待讨论话题",
+    "topicsSub": "学生、顾问或家长都可以在这里记下想在会谈中讨论的事。",
+    "noMeetings": "还没有会谈。",
+    "noUpcoming": "没有即将召开的会谈。",
+    "noPast": "还没有结束的会谈。",
+    "noTopics": "还没有待讨论话题。",
+    "statusLabel": "状态",
+    "openDetail": "打开详情 →",
+    "new": {
+      "title": "新增会谈",
+      "modeSchedule": "安排未来会谈",
+      "modeLogPast": "记录过往会谈",
+      "meetingTitle": "标题",
+      "meetingTitlePlaceholder": "例如：Parsons 申请进度同步",
+      "when": "时间",
+      "durationMinutes": "时长（分钟）",
+      "link": "会议链接（可选）",
+      "linkPlaceholder": "例如：Zoom / 腾讯会议 链接",
+      "agendaHeading": "议程",
+      "agendaAdd": "+ 添加议程条目",
+      "agendaPlaceholder": "待讨论的要点",
+      "agendaNotes": "备注",
+      "pickFromTopics": "从待讨论话题中选择：",
+      "notesHeading": "会谈笔记",
+      "notesPlaceholder": "把这次会谈涉及的内容写下来……",
+      "save": "保存",
+      "saveAndExtract": "保存并让 AI 提炼",
+      "saving": "保存中……"
+    },
+    "request": {
+      "title": "申请一次会谈",
+      "topic": "想讨论的话题",
+      "topicPlaceholder": "简单写下你希望谈的内容",
+      "preferredTime": "期望的时间（可选）",
+      "submit": "提交申请",
+      "submitting": "提交中……",
+      "success": "已提交！顾问会收到邮件通知。"
+    },
+    "topics": {
+      "add": "+ 新增话题",
+      "titlePlaceholder": "例如：一起过一遍 Parsons 住宿申请",
+      "duration": "预计时长（分钟）",
+      "notes": "备注",
+      "notesPlaceholder": "想讨论的要点……",
+      "open": "待讨论",
+      "scheduled": "已进入 {title}",
+      "completed": "已讨论",
+      "markCompleted": "标记为已讨论",
+      "reopen": "重新打开"
+    },
+    "detail": {
+      "agenda": "议程",
+      "notes": "会谈笔记",
+      "notesEmpty": "还没有笔记。",
+      "link": "会议链接",
+      "openLink": "打开链接 →",
+      "aiExtract": "AI 提炼",
+      "aiExtractRun": "让 AI 提炼笔记",
+      "aiExtractRunning": "AI 阅读中……",
+      "aiSummary": "摘要",
+      "aiKeyUpdates": "关键更新",
+      "aiSuggestions": "AI 建议（需顾问确认）",
+      "accept": "采纳",
+      "reject": "不采纳",
+      "accepted": "已采纳",
+      "rejected": "已拒绝",
+      "reflections": "我的反思",
+      "reflectionsEmpty": "还没有反思。",
+      "reflectionPlaceholder": "这次会谈带给你什么感受、启发或下一步？（只有你自己能读到）",
+      "reflectionAdd": "保存反思",
+      "reflectionSummarizing": "AI 正在总结……",
+      "cancelMeeting": "取消会谈",
+      "deleteMeeting": "删除会谈",
+      "confirmCancel": "确认取消这次会谈？",
+      "confirmDelete": "确认删除这次会谈？该操作不可恢复。",
+      "requestedBy": "由 {name} 发起",
+      "rejectReason": "拒绝理由",
+      "rejectReasonPlaceholder": "写一句话说明为什么不安排。",
+      "approveRequest": "确认并安排",
+      "rejectRequest": "拒绝该申请"
+    }
+  },
+  "growth": {
+    "heading": "成长",
+    "subheading": "一边执行，一边构建属于你自己的故事。",
+    "roleBlurbNote": "学生的日记仅学生与管理者可见；其他内容顾问与学生共建，家长只读。",
+    "insights": {
+      "heading": "成长洞察",
+      "subheading": "AI 从你的叙述、日记、反思与活动中提炼出的主题、模式与下一步。",
+      "refresh": "重新生成",
+      "refreshing": "生成中……",
+      "lastGenerated": "上次生成：{when}",
+      "empty": "还没有洞察。在左侧填充一些内容后，点击「重新生成」即可。",
+      "themes": "涌现的主题",
+      "values": "价值观与关切",
+      "directions": "可能的方向",
+      "growthAreas": "可以精进的方向",
+      "recommendations": "来自 AI 的具体建议"
+    },
+    "narrative": {
+      "heading": "叙述构建",
+      "subheading": "顾问与学生共同编辑。AI 会把这些输入与日记、反思一起纳入思考。",
+      "add": "+ 新增",
+      "kindTheme": { "label": "主题", "blurb": "反复出现的兴趣、关切或驱动力。", "hint": "例如：通过设计回应气候焦虑" },
+      "kindValue": { "label": "价值观", "blurb": "你最在意的底层原则。", "hint": "例如：真实 > 精致；手工制作 > 快消" },
+      "kindStory": { "label": "关键故事", "blurb": "足以定义你的一段经历或转变。", "hint": "写下它最重要的那几句。" },
+      "kindGrowth_area": { "label": "成长方向", "blurb": "你想突破的地方。", "hint": "例如：敢于公开分享作品" },
+      "kindDirection": { "label": "未来方向", "blurb": "下一阶段值得投入的路径。", "hint": "例如：把服装回收项目做成校园联合工作坊" },
+      "empty": "这一类还没有内容。",
+      "contentPlaceholder": "写下内容……可中英混排。"
+    },
+    "journal": {
+      "heading": "日记",
+      "subheading": "只有你和管理者能看到。AI 会读取它来帮你发现模式，但不会把原文展示给其他人。",
+      "otherRoleNote": "日记由学生私下书写，不会展示给顾问或家长。",
+      "add": "+ 新增日记",
+      "placeholder": "今天发生了什么？你感受到什么？……（英文中文皆可）",
+      "empty": "还没有日记。",
+      "saving": "保存中……"
+    },
+    "ideas": {
+      "heading": "想法与备选",
+      "subheading": "顾问与学生共同收集想法的地方——暑期项目、可约推荐信的老师、一起读的书等。每块看板都像一个小文档，可以自由书写链接、想法和判断。",
+      "newBoard": "+ 新建看板",
+      "empty": "还没有看板。",
+      "emptyReadOnly": "还没有看板。",
+      "quickStartHeading": "快速开始——点一个立刻创建该看板：",
+      "suggestions": {
+        "summer": { "title": "暑期项目", "description": "在考虑的暑校与暑期项目。" },
+        "teachers": { "title": "推荐信老师候选", "description": "了解你、可以写出有力推荐信的老师。" },
+        "books": { "title": "一起读的书", "description": "师生共读的书单。" },
+        "clubs": { "title": "正在权衡的社团", "description": "今年想要深入参与的选项。" }
+      },
+      "wordCount": "{n} 字",
+      "linkCount": "{n} 个链接",
+      "emptyBoardHint": "空空如也。点击打开，开始记录。",
+      "create": {
+        "title": "新建看板",
+        "name": "名称",
+        "namePlaceholder": "例如：暑期项目",
+        "description": "简短说明（可选）",
+        "descriptionPlaceholder": "这块看板里放什么？",
+        "submit": "创建看板",
+        "submitting": "创建中……",
+        "errorName": "请给看板起个名字。"
+      },
+      "doc": {
+        "placeholderEdit": "想到什么都可以写——想申请的项目、截止日期链接、老师名字、你对每个选项的看法。下面的提醒会基于此自动提炼。",
+        "placeholderRead": "这个看板还是空的。",
+        "confirmDelete": "确认删除「{title}」？这会把整个看板和笔记一起删掉。",
+        "errorTitle": "看板需要一个名字。"
+      }
+    },
+    "reminders": {
+      "heading": "提醒",
+      "subheading": "AI 会读取你的「想法与备选」看板，提炼出截止日期和需要尽快关注的事项。新增内容后点「刷新」即可重新提炼。",
+      "scan": "扫描看板",
+      "refresh": "刷新",
+      "scanning": "思考中……",
+      "lastScanned": "上次扫描：{when}",
+      "staleNote": "看板在此之后有更新——刷新以同步最新内容。",
+      "emptyNoContent": "暂时没有可扫描的内容——先到上方看板里写点带日期、链接或要决定的事，然后点「扫描看板」。",
+      "emptyAfterScan": "没有提炼出具体的提醒。可以在看板里加入日期、截止日期或「需要决定」的措辞后再刷新。",
+      "emptyBeforeScan": "还没有提醒——点「扫描看板」让 AI 从你的笔记里提炼截止日期。",
+      "emptyReadOnly": "还没有提醒。",
+      "openBoard": "打开「{title}」 →",
+      "urgency": {
+        "soon": "紧急",
+        "upcoming": "近期",
+        "later": "未来"
+      }
+    },
+    "activities": {
+      "heading": "活动档案",
+      "subheading": "每一项活动写下：做了什么、为什么做、学到什么、它与你的故事如何呼应。AI 会为每一条给出简要的叙述角度。",
+      "add": "+ 新增活动",
+      "empty": "还没有活动。",
+      "titlePlaceholder": "活动名称",
+      "descriptionPlaceholder": "做了什么？",
+      "motivationPlaceholder": "为什么做？",
+      "learningPlaceholder": "学到了什么？",
+      "relevancePlaceholder": "和你的故事有什么关系？",
+      "aiFrame": "让 AI 给一个叙述角度",
+      "aiFraming": "生成中……",
+      "aiHeading": "AI 叙述角度",
+      "descriptionLabel": "做了什么",
+      "motivationLabel": "为什么做",
+      "learningLabel": "学到了什么",
+      "relevanceLabel": "与整体故事的关系"
+    }
+  },
+  "errors": {
+    "notAllowed": "没有权限。",
+    "noStudentLinked": "账号尚未关联学生。",
+    "titleRequired": "标题是必填项。",
+    "contentRequired": "内容是必填项。",
+    "notFound": "找不到对应条目。",
+    "generic": "出错了，请稍后重试。",
+    "anthropic": "AI 请求失败：{message}",
+    "anthropicNoTool": "AI 没有按预期返回结果。",
+    "supabase": "数据库错误：{message}",
+    "networkBusy": "网络繁忙，请稍后再试。",
+    "invalidInput": "输入不合法。",
+    "missingField": "请填写 {field}。",
+    "dateInvalid": "日期格式不正确。",
+    "meetingNotFound": "找不到这次会谈。",
+    "topicNotFound": "找不到这个话题。",
+    "boardNotFound": "找不到这个看板。",
+    "boardNameRequired": "请给看板起个名字。",
+    "activityTitleRequired": "请填写活动名称。",
+    "reflectionEmpty": "反思内容不能为空。",
+    "journalEmpty": "日记内容不能为空。",
+    "narrativeEmpty": "叙述内容不能为空。",
+    "suggestionNotFound": "找不到该建议。",
+    "goalTextRequired": "请写下目标内容。",
+    "todoTextRequired": "请写下待办内容。"
+  },
+  "validation": {
+    "emailInvalid": "请输入有效邮箱。",
+    "passwordTooShort": "密码至少 8 位。",
+    "fullNameRequired": "请填写姓名。",
+    "roleRequired": "请选择角色。",
+    "studentEmailRequired": "请填写关联的学生邮箱。",
+    "studentEmailMismatch": "找不到该学生邮箱，请确认已注册或联系管理者。"
+  },
+  "emails": {
+    "approval": {
+      "subject": "[升学 OS] 新用户审批：{name}（{role}）",
+      "greetingHtml": "<p>有新用户请求使用系统。</p>",
+      "nameLabel": "姓名",
+      "emailLabel": "邮箱",
+      "roleLabel": "角色",
+      "supportLabel": "支持的学生",
+      "noneLabel": "（无）",
+      "approveCta": "通过",
+      "rejectCta": "拒绝",
+      "footer": "链接 48 小时内有效；过期后请让用户重新申请。",
+      "plainIntro": "有新用户请求使用系统：",
+      "plainApprove": "通过：",
+      "plainReject": "拒绝："
+    },
+    "meetingRequest": {
+      "subject": "{name} 申请了一次会谈",
+      "html": "<p><strong>{name}</strong> 申请了一次会谈。</p><p><strong>想讨论：</strong> {topic}</p><p><strong>期望时间：</strong> {preferred}</p><p>请登录升学 OS 确认或拒绝。</p>",
+      "plain": "{name} 申请了一次会谈。\n想讨论：{topic}\n期望时间：{preferred}\n请登录升学 OS 确认或拒绝。",
+      "preferredAny": "未指定"
+    }
+  },
+  "adminApprove": {
+    "missingToken": "缺少审批令牌。",
+    "invalidToken": "令牌无效或已过期。",
+    "alreadyProcessed": "该申请已处理。",
+    "dbError": "数据库错误。",
+    "approved": "已通过。{name} 现在可以登录使用了。",
+    "rejected": "已拒绝 {name} 的申请。"
+  }
+}
