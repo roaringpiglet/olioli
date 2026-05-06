@@ -299,7 +299,7 @@ ${renderMeetingHistory(history, { limit: 12 })}
   // the rest of the app (and the DB) speaks. Missing notes get an empty
   // string — the editor will simply show that area as not yet filled.
   const focusAreas: FocusArea[] = AREA_LABEL.map(({ key, area }) => {
-    const note = (toolInput as Record<string, unknown>)[key];
+    const note = toolInput[key];
     return {
       area,
       note: typeof note === "string" ? note.trim() : "",
